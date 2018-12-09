@@ -1,22 +1,16 @@
 package edu.insightr.gildedrose;
 
+import javafx.scene.control.Button;
+
 public class Inventory {
 
     private Item[] items;
-
-    public Item[] getItems() {
-        return items;
-    }
-    public void setItems(Item[] items) {
-        this.items = items;
-    }
 
     public Inventory(Item[] items) {
         super();
         this.items = items;
     }
 
-    //Constructeur déjà rempli
     public Inventory() {
         super();
         items = new Item[]{
@@ -27,6 +21,7 @@ public class Inventory {
                 new Item("Backstage passes to a TAFKAL80ETC concert", 15, 20),
                 new Item("Conjured Mana Cake", 3, 6)
         };
+
     }
 
     public void printInventory() {
@@ -40,7 +35,8 @@ public class Inventory {
 
     public void updateQuality() {
         for (int i = 0; i < items.length; i++) {
-            if (items[i].getName() != "Aged Brie" && items[i].getName() != "Backstage passes to a TAFKAL80ETC concert") {
+            if (items[i].getName() != "Aged Brie"
+                    && items[i].getName() != "Backstage passes to a TAFKAL80ETC concert") {
                 if (items[i].getQuality() > 0) {
                     if (items[i].getName() != "Sulfuras, Hand of Ragnaros") {
                         items[i].setQuality(items[i].getQuality() - 1);
@@ -49,20 +45,17 @@ public class Inventory {
             } else {
                 if (items[i].getQuality() < 50) {
                     items[i].setQuality(items[i].getQuality() + 1);
-                    //Brie et places ont leur qualité qui augmente avec le temps.
 
                     if (items[i].getName() == "Backstage passes to a TAFKAL80ETC concert") {
                         if (items[i].getSellIn() < 11) {
                             if (items[i].getQuality() < 50) {
                                 items[i].setQuality(items[i].getQuality() + 1);
-                                //Les 10 derniers jours, la qualité des places augmente.
                             }
                         }
 
                         if (items[i].getSellIn() < 6) {
                             if (items[i].getQuality() < 50) {
                                 items[i].setQuality(items[i].getQuality() + 1);
-                                //Les 5 derniers jours, la qualité des places augmente plus.
                             }
                         }
                     }
@@ -71,7 +64,6 @@ public class Inventory {
 
             if (items[i].getName() != "Sulfuras, Hand of Ragnaros") {
                 items[i].setSellIn(items[i].getSellIn() - 1);
-                //tous les items vieillisent d un jour, sauf Ragnaros
             }
 
             if (items[i].getSellIn() < 0) {
@@ -94,8 +86,13 @@ public class Inventory {
         }
     }
 
-    //Créer une méthode Update SellIn (a faire)
+    public Item[] getItems() {
+        return items;
+    }
 
+    public void setItems(Item[] items) {
+        this.items = items;
+    }
 
     public static void main(String[] args) {
         Inventory inventory = new Inventory();
