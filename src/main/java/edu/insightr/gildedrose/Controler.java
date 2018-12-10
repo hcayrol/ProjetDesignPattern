@@ -63,8 +63,6 @@ public class Controler implements Initializable {
        initTable();
 
        loadData();
-
-
        countKinds();
        for(int i=0;i<6;i++)
        {

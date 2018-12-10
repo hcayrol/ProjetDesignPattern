@@ -26,7 +26,7 @@
       <Label fx:id="number" layoutX="420.0" layoutY="72.0" text="number of items: " />
       <VBox alignment="BASELINE_LEFT" layoutX="586.0" layoutY="25.0" prefHeight="302.0" prefWidth="582.0">
          <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="kinds of items" textAlignment="CENTER" wrappingWidth="574.96484375">
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Kinds of items" textAlignment="CENTER" wrappingWidth="574.96484375">
                <font>
                   <Font name="Arial Black" size="40.0" />
                </font>

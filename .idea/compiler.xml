@@ -7,10 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="ProjetDesignPattern" />
+        <module name="ProjetDesignPattern2" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="ProjetDesignPattern" target="1.8" />
+      <module name="ProjetDesignPattern2" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
