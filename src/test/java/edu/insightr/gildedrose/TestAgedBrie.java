@@ -1,5 +1,7 @@
-package edu.insightr.gildedrose;
+package java.edu.insightr.gildedrose;
 
+import edu.insightr.gildedrose.Inventory;
+import edu.insightr.gildedrose.Item;
 import org.junit.Test;
 
 import static org.junit.Assert.assertThat;

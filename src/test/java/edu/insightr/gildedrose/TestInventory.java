@@ -1,7 +1,9 @@
-package edu.insightr.gildedrose;
+package java.edu.insightr.gildedrose;
 
 //import com.sun.tools.corba.se.idl.constExpr.Equal;
 
+import edu.insightr.gildedrose.Inventory;
+import edu.insightr.gildedrose.Item;
 import org.junit.Before;
 import org.junit.Test;
 
